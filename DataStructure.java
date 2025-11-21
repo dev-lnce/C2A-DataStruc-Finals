@@ -15,7 +15,7 @@ public class DataStructure {
 
     public static void main(String[] args) {
         System.out.println("============================================");
-        System.out.println("   DATA STRUCTURE VISUALIZER (CONSOLE UI)   ");
+        System.out.println("         DATA STRUCTURE VISUALIZER          ");
         System.out.println("============================================");
 
         boolean running = true;
@@ -288,3 +288,4 @@ public class DataStructure {
         return sc.nextInt();
     }
 }
+
