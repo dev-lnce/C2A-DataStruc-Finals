@@ -68,7 +68,7 @@ public class DataStructure {
             System.out.println("2. Add at Start");
             System.out.println("3. Add at Index");
             System.out.println("4. Remove by Index");
-            System.out.prinln("5. Get by Index");
+            System.out.println("5. Get by Index");
             System.out.println("6. Get size");
             System.out.println("7. Search");
             System.out.println("8. Sort");
@@ -95,29 +95,35 @@ public class DataStructure {
                     break;
                 case 4:
                     System.out.print("Enter index to remove: ");
-                    int index = sc.nextInt();
-                    myArrayList.removeByIndex(index, getIntInput());
+                    int index = getIntInput();
+                    myArrayList.removeByIndex(getIntInput());
                     break;
                 case 5:
                     System.out.print("Enter index: ");
-                    int index2 = sc.nextInt();
-                    get(index2);
+                    int index2 = getIntInput();
+                    System.out.println("Value: " + myArrayList.get(index2));
                     break;
-
-                    
+                case 6:
+                    System.out.println("Size: " + myArrayList.getSize());
+                    break;
+                case 7:
                     System.out.print("Enter value to search: ");
                     boolean found = myArrayList.search(getIntInput());
                     System.out.println("Result: " + (found ? "FOUND" : "NOT FOUND"));
                     break;
-                case 5:
+                case 8:
                     myArrayList.sort();
                     System.out.println("List sorted.");
                     break;
-                case 6:
+                case 9:
                     myArrayList.clear();
                     System.out.println("List cleared.");
                     break;
-                case 7:
+                case 10:
+                    myArrayList.clear();
+                    System.out.println("List cleared.");
+                    break;
+                case 11:
                     inMenu = false;
                     break;
                 default:
@@ -305,5 +311,6 @@ public class DataStructure {
         return sc.nextInt();
     }
 }
+
 
 
