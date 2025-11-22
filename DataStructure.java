@@ -101,7 +101,7 @@ public class DataStructure {
                 case 5:
                     System.out.print("Enter index: ");
                     int index2 = getIntInput();
-                    System.out.println("Value: " + myArrayList.get(index2));
+                    System.out.println("Value: " + myArrayList.get(index));
                     break;
                 case 6:
                     System.out.println("Size: " + myArrayList.getSize());
@@ -315,6 +315,7 @@ public class DataStructure {
         return sc.nextInt();
     }
 }
+
 
 
 
