@@ -9,7 +9,7 @@ public class MyArrayList {
         size = 0;
     }
 
-    private static makeBigger() {
+    private static void makeBigger() {
         if (size == array.length) {
             int[] temp = new int[array.length * 2];
             for (int i = 0; i < array.length; i++) {
@@ -118,6 +118,7 @@ public class MyArrayList {
 
 
 }
+
 
 
 
