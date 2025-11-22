@@ -12,7 +12,7 @@ public class MyLinkedList {
         }
     }
 
-    private Node head;
+    private static Node head;
 
     public MyLinkedList() {
         head = null;
@@ -129,6 +129,7 @@ public class MyLinkedList {
 
         System.out.println();   
         }    
+    }
 }
 
 
