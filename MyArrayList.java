@@ -90,7 +90,7 @@ public class MyArrayList {
     
     public boolean search(int value) {
         for (int i = 0; i < size; i++) {
-            if (data[i] == value) {
+            if (array[i] == value) {
                 return true;
             }
         }
@@ -118,6 +118,7 @@ public class MyArrayList {
 
 
 }
+
 
 
 
