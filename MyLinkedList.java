@@ -29,8 +29,9 @@ public class MyLinkedList {
             }
             current.next = newNode;
         }
+        showAll();
     }
-
+    
     public void addStart(int value) {
         Node newNode = new Node(value);
         newNode.next = head;
@@ -107,4 +108,17 @@ public class MyLinkedList {
     public void clear() {
         head = null;
     }
+
+    public static void showAll() {
+        Node temp = head;
+        System.out.print("Items: ");
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
 }
+
+
+
