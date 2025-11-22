@@ -13,7 +13,7 @@ public class MyArrayList {
         if (size == array.length) {
             int[] temp = new int[array.length * 2];
             for (int i = 0; i < array.length; i++) {
-                temp[i] = data[i];
+                temp[i] = array[i];
             }
             array = temp;
         }
@@ -23,17 +23,15 @@ public class MyArrayList {
         makeBigger();
         array[size] = num;
         size++;
-        showAll();
     }
 
-   public static void addAtStart(int num) {
+   public static void addStart(int num) {
         makeBigger();
         for (int i = size; i > 0; i--) {
             array[i] = array[i - 1];
         }
         array[0] = num;
         size++;
-        showAll();
     }
 
     public static void addAtIndex(int index, int num) {
@@ -48,9 +46,8 @@ public class MyArrayList {
             array[i] = array[i - 1];
         }
 
-        array[index] = num2;
+        array[index] = num;
         size++;
-        showAll();
     }
 
     public static void removeByIndex(int index) {
@@ -64,38 +61,20 @@ public class MyArrayList {
         }
 
         size--;
-        showAll();
     }
 
     public static void get(int index2) {
         if (index2 < 0 || index2 >= size) {
             System.out.println("Invalid index");
-            return;
+            return-1;
         }
-        System.out.println("Number at index " + index2 + ": " + array[index2]);
+        return array[index];
     }
 
     public int getSize() {
-        System.out.println("Size: " + size);
+        return size;
     }
 
-    public boolean search(int num3) {
-        boolean found = false;
-
-        for (int i = 0; i < size; i++) {
-            if (array[i] == num3) {
-                System.out.println("Found at index " + i);
-                found = true;
-            }
-        }
-
-        if (!found) {
-            System.out.println("Number not found.");
-        }
-
-        showAll();
-    }
-    
      public void showAll() {
         if (size == 0){
             System.out.println("Array is empty.");
@@ -139,4 +118,5 @@ public class MyArrayList {
 
 
 }
+
 
