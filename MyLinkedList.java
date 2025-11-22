@@ -56,23 +56,8 @@ public class MyLinkedList {
 
         newNode.next = current.next;
         current.next = newNode;
-    }
 
-    public String listAll() {
-        if (head == null) {
-            return "Linked List: [] (Empty)";
-        }
-        String output = "Linked List: [";
-        Node current = head;
-        while (current != null) {
-            output += current.data;
-            if (current.next != null) {
-                output += " -> ";
-            }
-            current = current.next;
-        }
-        output += "]";
-        return output;
+        showAll();
     }
 
     public boolean search(int value) {
@@ -103,10 +88,13 @@ public class MyLinkedList {
                 current = current.next;
             }
         } while (wasSwapped);
+        System.out.println("Array sorted.");
+        showAll();
     }
 
     public void clear() {
         head = null;
+        System.out.println("All items are now cleared.");
     }
 
     public static void showAll() {
@@ -119,6 +107,7 @@ public class MyLinkedList {
         System.out.println();
     }
 }
+
 
 
 
