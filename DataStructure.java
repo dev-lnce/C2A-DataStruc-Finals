@@ -273,46 +273,7 @@ public class DataStructure {
     }
 
     public static void runTreeMenu() {
-        boolean inMenu = true;
-        while (inMenu) {
-            System.out.println("====================================================");
-            System.out.println("          Welcome to Trees Implementation!          ");
-            System.out.println("====================================================");
-            System.out.println(myTree.listAll()); // Visualize
-            System.out.println("Pick a Command You'd like to try: ");
-            System.out.println("1. Insert");
-            System.out.println("2. Delete");
-            System.out.println("3. Search");
-            System.out.println("4. Display");
-            System.out.println("5. Exit Trees");
-            System.out.print("Choice: ");
-            int choice1 = sc.nextInt();
-
-            int choice = getIntInput();
-            switch (choice) {
-                case 1:
-                    System.out.print("Enter value to add: ");
-                    myTree.add(getIntInput());
-                    break;
-                case 2:
-                    System.out.print("Enter value to search: ");
-                    boolean found = myTree.search(getIntInput());
-                    System.out.println("Result: " + (found ? "FOUND" : "NOT FOUND"));
-                    break;
-                case 3:
-                    System.out.println(myTree.listAll());
-                    break;
-                case 4:
-                    myTree.clear();
-                    System.out.println("Tree cleared.");
-                    break;
-                case 5:
-                    inMenu = false;
-                    break;
-                default:
-                    System.out.println("Invalid choice.");
-            }
-        }
+        myTree.run();
     }
 
     public static int getIntInput() {
@@ -323,6 +284,7 @@ public class DataStructure {
         return sc.nextInt();
     }
 }
+
 
 
 
