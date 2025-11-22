@@ -67,29 +67,44 @@ public class DataStructure {
             System.out.println("1. Add at End");
             System.out.println("2. Add at Start");
             System.out.println("3. Add at Index");
-            System.out.println("4. Search");
-            System.out.println("5. Sort");
-            System.out.println("6. Clear");
-            System.out.println("7. Back to Main Menu");
+            System.out.println("4. Remove by Index");
+            System.out.prinln("5. Get by Index");
+            System.out.println("6. Get size");
+            System.out.println("7. Search");
+            System.out.println("8. Sort");
+            System.out.println("9. Show all");
+            System.out.println("10. Clear");
+            System.out.println("11. Back to Main Menu");
             System.out.print("Enter choice: ");
 
             int choice = getIntInput();
             switch (choice) {
                 case 1:
-                    System.out.print("Enter value to add (End): ");
+                    System.out.print("Enter number: ");
                     myArrayList.addEnd(getIntInput());
                     break;
                 case 2:
-                    System.out.print("Enter value to add (Start): ");
+                    System.out.print("Enter number: ");
                     myArrayList.addStart(getIntInput());
                     break;
                 case 3:
                     System.out.print("Enter index: ");
                     int idx = getIntInput();
-                    System.out.print("Enter value: ");
+                    System.out.print("Enter number: ");
                     myArrayList.addAtIndex(idx, getIntInput());
                     break;
                 case 4:
+                    System.out.print("Enter index to remove: ");
+                    int index = sc.nextInt();
+                    myArrayList.removeByIndex(index, getIntInput());
+                    break;
+                case 5:
+                    System.out.print("Enter index: ");
+                    int index2 = sc.nextInt();
+                    get(index2);
+                    break;
+
+                    
                     System.out.print("Enter value to search: ");
                     boolean found = myArrayList.search(getIntInput());
                     System.out.println("Result: " + (found ? "FOUND" : "NOT FOUND"));
@@ -290,4 +305,5 @@ public class DataStructure {
         return sc.nextInt();
     }
 }
+
 
