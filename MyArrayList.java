@@ -63,10 +63,10 @@ public class MyArrayList {
         size--;
     }
 
-    public static void get(int index2) {
-        if (index2 < 0 || index2 >= size) {
+    public int get(int index) {
+        if (index < 0 || index >= size) {
             System.out.println("Invalid index");
-            return-1;
+            return -1;
         }
         return array[index];
     }
@@ -118,5 +118,6 @@ public class MyArrayList {
 
 
 }
+
 
 
