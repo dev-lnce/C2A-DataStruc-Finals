@@ -267,14 +267,18 @@ public class DataStructure {
     public static void runTreeMenu() {
         boolean inMenu = true;
         while (inMenu) {
-            System.out.println("\n>>> TREE OPERATIONS (Binary Search Tree)");
+            System.out.println("====================================================");
+            System.out.println("          Welcome to Trees Implementation!          ");
+            System.out.println("====================================================");
             System.out.println(myTree.listAll()); // Visualize
-            System.out.println("1. Add Value");
-            System.out.println("2. Search");
-            System.out.println("3. Show In-Order (Sort)");
-            System.out.println("4. Clear");
-            System.out.println("5. Back to Main Menu");
-            System.out.print("Enter choice: ");
+            System.out.println("Pick a Command You'd like to try: ");
+            System.out.println("1. Insert");
+            System.out.println("2. Delete");
+            System.out.println("3. Search");
+            System.out.println("4. Display");
+            System.out.println("5. Exit Trees");
+            System.out.print("Choice: ");
+            int choice1 = sc.nextInt();
 
             int choice = getIntInput();
             switch (choice) {
@@ -311,6 +315,7 @@ public class DataStructure {
         return sc.nextInt();
     }
 }
+
 
 
 
