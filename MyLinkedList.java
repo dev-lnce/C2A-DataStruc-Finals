@@ -60,6 +60,24 @@ public class MyLinkedList {
         showAll();
     }
 
+    public static void removeByIndex(int index) {
+        if (index < 0) {
+            System.out.println("Invalid index.");
+            return;
+        }
+
+        if (index == 0) {
+            head = head.next;
+        } else {
+            Node temp = head;
+            for (int i = 0; i < index - 1; i++) {
+                temp = temp.next;
+            }
+            temp.next = temp.next.next;
+        }
+        showAll();
+    }
+    
     public boolean search(int value) {
         Node current = head;
         while (current != null) {
@@ -107,6 +125,7 @@ public class MyLinkedList {
         System.out.println();
     }
 }
+
 
 
 
