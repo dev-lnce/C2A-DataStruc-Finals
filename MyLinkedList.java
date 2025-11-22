@@ -36,6 +36,7 @@ public class MyLinkedList {
         Node newNode = new Node(value);
         newNode.next = head;
         head = newNode;
+        showAll();
     }
 
     public void addAtIndex(int index, int value) {
@@ -61,7 +62,7 @@ public class MyLinkedList {
     }
 
     public static void removeByIndex(int index) {
-        if (index < 0) {
+        if (index < 0 || head == null) {
             System.out.println("Invalid index.");
             return;
         }
@@ -69,11 +70,11 @@ public class MyLinkedList {
         if (index == 0) {
             head = head.next;
         } else {
-            Node temp = head;
+            Node current = head;
             for (int i = 0; i < index - 1; i++) {
-                temp = temp.next;
+                current = current.next;
             }
-            temp.next = temp.next.next;
+            current.next = current.next.next;
         }
         showAll();
     }
@@ -106,7 +107,6 @@ public class MyLinkedList {
                 current = current.next;
             }
         } while (wasSwapped);
-        System.out.println("Array sorted.");
         showAll();
     }
 
@@ -116,15 +116,21 @@ public class MyLinkedList {
     }
 
     public static void showAll() {
-        Node temp = head;
-        System.out.print("Items: ");
-        while (temp != null) {
-            System.out.print(temp.data + " ");
-            temp = temp.next;
+        if (head == null){
+            System.out.println("List is empty.");
+            return;
         }
-        System.out.println();
-    }
+
+        Node current = head;
+        System.out.print("Items: ");
+        while (current!=null){
+            System.out.print(current.data + " ");
+            current = current.next;
+
+        System.out.println();   
+        }    
 }
+
 
 
 
