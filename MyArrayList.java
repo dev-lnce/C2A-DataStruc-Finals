@@ -1,15 +1,15 @@
 package Try;
 
 public class MyArrayList {
-    private int[] array;
-    private int size;
+    private static int[] array;
+    private static int size;
 
     public MyArrayList() {
         array = new int[10];
         size = 0;
     }
 
-    private void makeBigger() {
+    private static makeBigger() {
         if (size == array.length) {
             int[] temp = new int[array.length * 2];
             for (int i = 0; i < array.length; i++) {
@@ -118,6 +118,7 @@ public class MyArrayList {
 
 
 }
+
 
 
 
