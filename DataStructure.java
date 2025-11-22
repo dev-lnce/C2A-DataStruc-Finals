@@ -163,19 +163,27 @@ public class DataStructure {
                     myLinkedList.addAtIndex(idx, getIntInput());
                     break;
                 case 4:
+                    System.out.print("Enter index to remove: ");
+                    int index = getIntInput();
+                    myLinkedList.removeByIndex(index);
+                    break;
+                case 5:
                     System.out.print("Enter value to search: ");
                     boolean found = myLinkedList.search(getIntInput());
                     System.out.println("Result: " + (found ? "FOUND" : "NOT FOUND"));
                     break;
-                case 5:
+                case 6:
                     myLinkedList.sort();
                     System.out.println("List sorted.");
                     break;
-                case 6:
+                case 7:
+                    showAll();
+                    break;
+                case 8:
                     myLinkedList.clear();
                     System.out.println("List cleared.");
                     break;
-                case 7:
+                case 9:
                     inMenu = false;
                     break;
                 default:
@@ -315,6 +323,7 @@ public class DataStructure {
         return sc.nextInt();
     }
 }
+
 
 
 
