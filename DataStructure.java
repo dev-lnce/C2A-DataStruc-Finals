@@ -135,7 +135,6 @@ public class DataStructure {
         boolean inMenu = true;
         while (inMenu) {
             System.out.println("\n>>> LINKED LIST OPERATIONS");
-            System.out.println(myLinkedList.listAll()); // Visualize
             System.out.println("1. Add at End");
             System.out.println("2. Add at Start");
             System.out.println("3. Add at Index");
@@ -324,6 +323,7 @@ public class DataStructure {
         return sc.nextInt();
     }
 }
+
 
 
 
