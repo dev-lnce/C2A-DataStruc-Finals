@@ -19,7 +19,7 @@ public class MyArrayList {
         }
     }
 
-    public static void add(int num) {
+    public static void addEnd(int num) {
         makeBigger();
         array[size] = num;
         size++;
@@ -36,19 +36,19 @@ public class MyArrayList {
         showAll();
     }
 
-    public static void insertAt(int position, int num2) {
-        if (position < 0 || position > size) {
+    public static void addAtIndex(int index, int num) {
+        if (index < 0 || index > size) {
             System.out.println("Invalid position.");
             return;
         }
 
         makeBigger();
 
-        for (int i = size; i > position; i--) {
+        for (int i = size; i > index; i--) {
             array[i] = array[i - 1];
         }
 
-        array[position] = num2;
+        array[index] = num2;
         size++;
         showAll();
     }
@@ -75,11 +75,11 @@ public class MyArrayList {
         System.out.println("Number at index " + index2 + ": " + array[index2]);
     }
 
-    public static void getSize() {
+    public int getSize() {
         System.out.println("Size: " + size);
     }
 
-    public static void search(int num3) {
+    public boolean search(int num3) {
         boolean found = false;
 
         for (int i = 0; i < size; i++) {
@@ -96,13 +96,19 @@ public class MyArrayList {
         showAll();
     }
     
-     public static void showAll() {
+     public void showAll() {
+        if (size == 0){
+            System.out.println("Array is empty.");
+            return;
+        }
+         
         System.out.print("Items: ");
         for (int i = 0; i < size; i++) {
             System.out.print(array[i] + " ");
         }
         System.out.println();
     }
+    
     public boolean search(int value) {
         for (int i = 0; i < size; i++) {
             if (data[i] == value) {
@@ -112,7 +118,7 @@ public class MyArrayList {
         return false;
     }
 
-    public static void sort() {
+    public void sort() {
         for (int i = 0; i < size - 1; i++) {
             for (int j = 0; j < size - i - 1; j++) {
                 if (array[j] > array[j + 1]) {
@@ -126,10 +132,11 @@ public class MyArrayList {
         showAll();
     }
 
-    public static void clear() {
+    public void clear() {
         size = 0;
         System.out.println("All items are now cleared.");
     }
 
 
 }
+
