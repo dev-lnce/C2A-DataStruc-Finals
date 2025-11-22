@@ -96,7 +96,7 @@ public class DataStructure {
                 case 4:
                     System.out.print("Enter index to remove: ");
                     int index = getIntInput();
-                    myArrayList.removeByIndex(getIntInput());
+                    myArrayList.removeByIndex(index);
                     break;
                 case 5:
                     System.out.print("Enter index: ");
@@ -114,10 +114,10 @@ public class DataStructure {
                 case 8:
                     myArrayList.sort();
                     System.out.println("List sorted.");
+                    myArrayList.showAll();
                     break;
                 case 9:
-                    myArrayList.clear();
-                    System.out.println("List cleared.");
+                    myArrayList.showAll();
                     break;
                 case 10:
                     myArrayList.clear();
@@ -311,6 +311,7 @@ public class DataStructure {
         return sc.nextInt();
     }
 }
+
 
 
 
