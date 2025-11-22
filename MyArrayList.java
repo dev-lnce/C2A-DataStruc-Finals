@@ -78,7 +78,6 @@ public class MyArrayList {
      public void showAll() {
         if (size == 0){
             System.out.println("Array is empty.");
-            return;
         }
          
         System.out.print("Items: ");
@@ -118,6 +117,7 @@ public class MyArrayList {
 
 
 }
+
 
 
 
