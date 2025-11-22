@@ -139,10 +139,12 @@ public class DataStructure {
             System.out.println("1. Add at End");
             System.out.println("2. Add at Start");
             System.out.println("3. Add at Index");
-            System.out.println("4. Search");
-            System.out.println("5. Sort");
-            System.out.println("6. Clear");
-            System.out.println("7. Back to Main Menu");
+            System.out.println("4. Remove by Index");
+            System.out.println("5. Search");
+            System.out.println("6. Sort");
+            System.out.println("7. Display the items");
+            System.out.println("8. Clear");
+            System.out.println("9. Back to Main Menu");
             System.out.print("Enter choice: ");
 
             int choice = getIntInput();
@@ -322,6 +324,7 @@ public class DataStructure {
         return sc.nextInt();
     }
 }
+
 
 
 
