@@ -1,5 +1,7 @@
 package Try;
 
+//hello ako si dev, Tinapos ko lahat ng gawain ko para makapag concert
+
 import java.util.Scanner;
 
 
