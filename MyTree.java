@@ -1,3 +1,5 @@
+package Try
+
 import java.util.Scanner;
 
 public class MyTree {
@@ -185,3 +187,4 @@ class BinaryTree{
         return root.data;
     }
 }
+
